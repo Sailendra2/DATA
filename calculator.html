@@ -1,0 +1,69 @@
+<Html>
+    <title>Calculator</title>
+    <style>
+        table.center{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+<body>
+    <h1 align = "center">CALCULATOR</h1>
+    <script>
+        //function for displaying values
+        function showv(val)
+        {
+        document.getElementById("sai").value+=val
+         }
+        //function for evaluation
+        function solve()
+        {
+        let x = document.getElementById("sai").value
+        let y = eval(x)
+        document.getElementById("sai").value = y
+        }
+        //function for clearing the display
+        function remv()
+        {
+        document.getElementById("sai").value = ""
+        }
+        </script>
+    <table class = "center" border="1" cellspacing = "10" cellpadding = "30" width = "400" height = "500">
+    <tr>
+    <td colspan="3"><input type="text" id="sai"/></td>
+    <td><input type="button" value="r" onclick="remv()"/> </td>
+    <!--clr() function will call clr to clear all values-->
+    </tr>
+    <tr>
+    <!-- creating buttons and assigning values-->
+    <td><input type="button" value="1" onclick="showv('1')"/> </td>
+    <td><input type="button" value="2" onclick="showv('2')"/> </td>
+    <td><input type="button" value="3" onclick="showv('3')"/> </td>
+    <td><input type="button" value="+" onclick="showv('+')"/> </td>
+    </tr>
+
+    <tr>
+    <td><input type="button" value="4" onclick="showv('4')"/> </td>
+    <td><input type="button" value="5" onclick="showv('5')"/> </td>
+    <td><input type="button" value="6" onclick="showv('6')"/> </td>
+    <td><input type="button" value="-" onclick="showv('-')"/> </td>
+    </tr>
+
+    <tr>
+    <td><input type="button" value="7" onclick="showv('7')"/> </td>
+    <td><input type="button" value="8" onclick="showv('8')"/> </td>
+    <td><input type="button" value="9" onclick="showv('9')"/> </td>
+    <td><input type="button" value="/" onclick="showv('/')"/> </td>
+
+    </tr>
+
+    <tr>
+    <td><input type="button" value="." onclick="showv('.')"/> </td>
+    <td><input type="button" value="0" onclick="showv('0')"/> </td>
+    <!-- Evaluating function call eval()-->
+    <td><input type="button" value="=" onclick="solve()"/> </td>
+    <td><input type="button" value="*" onclick="showv('/')"/> </td>
+
+    </tr>
+    </table>
+    </body>
+    </Html>
